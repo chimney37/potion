@@ -57,17 +57,17 @@ highlight link potionNumber Number
 syntax keyword potionFunction print say join length
 syntax keyword potionFunction string integer
 syntax keyword potionFunction abs sqrt 
-syntax region potionMethod start="\v\w+\s?\(" end="\v\)" contains=potionKeyword,potionNumber,potionOperator,potionQuote,potionParenthesis,potionString,potionFunction,potionMethod keepend
-syntax region potionMethodDef start="\v^\w+\s\=\s?\(" end="\v\):" contains=potionOperator,potionParenthesis,potionQuote,potionKeyword,potionNumber,potionCharacter,potionComment keepend
-syntax region potionClassDef start="\v^\w+\s\=\s?class\s?\(?" end="\v\)?:" contains=potionOperator,potionParenthesis,potionQuote,potionKeyword,potionNumber,potionCharacter,potionComment keepend
+syntax region potionMethod start="\v\w+\s?\(" skip=/\v\w+/ end="\v\)" contains=potionKeyword,potionNumber,potionOperator,potionQuote,potionParenthesis,potionString,potionFunction,potionMethod keepend
+syntax region potionMethodDef start="\v^\w+\s\=\s?\(" end="\v\):" contains=potionOperator,potionParenthesis,potionQuote,potionKeyword,potionNumber,potionCharacter keepend
+syntax region potionClassDef start="\v^\w+\s\=\s?class\s?\(?" end="\v\)?:" contains=potionOperator,potionParenthesis,potionQuote,potionKeyword,potionNumber,potionCharacter keepend
 highlight link potionFunction Function
 highlight link potionMethodDef Identifier
 highlight link potionClassDef Identifier
 highlight link potionMethod Identifier
 
 " Quote and Parenthesis
-syntax region potionString matchgroup=potionQuote start=+"+ end=+"+
-syntax region potionString matchgroup=potionQuote start=+'+ end=+'+
+syntax region potionString matchgroup=potionQuote start=/\v"/ skip=/\v\\+./ end=/\v"/
+syntax region potionString matchgroup=potionQuote start=/\v'/ skip=/\v\\+./ end=/\v'/
 
 highlight link potionQuote Quote
 highlight link potionString String
