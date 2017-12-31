@@ -40,8 +40,8 @@ function! GetPotionFold(lnum)
     endif
     
     " Get the indent level of current line and the next non blank line
-    let this_indent = IndentLevel(a:lnum)
-    let next_indent = IndentLevel(NextNonBlankLine(a:lnum))
+    let this_indent = s:IndentLevel(a:lnum)
+    let next_indent = s:IndentLevel(s:NextNonBlankLine(a:lnum))
 
     " case 1) next indent level is same
     "   in this case, we return current (this) indent level to fold it as the
@@ -57,6 +57,8 @@ function! GetPotionFold(lnum)
     " case 3) next indent level is more
     "  in this case, we want current (this) indent level to be at the next
     "  level. we return '>x', which tells Vim to open a fold of given level x
+    "  note we used . as opposed to a +. + only works for numbers. + will coerce strings to 0 
+    "  if they don't start with a number.
     elseif next_indent > this_indent
         return '>' . next_indent
     endif
@@ -64,7 +66,7 @@ endfunction
 "}}}
 
 " Helper: Get the line number of next non-blank line ------------{{{
-function! NextNonBlankLine(lnum)
+function! s:NextNonBlankLine(lnum)
     " line('$') gets total number of lines in file
     " $ is the last line of buffer
     " line gets the line number of the expr given to it
@@ -89,7 +91,7 @@ endfunction
 "}}}
 
 " Helper: Calculate indentation level---------{{{
-function! IndentLevel(lnum)
+function! s:IndentLevel(lnum)
     " indent(a:lnum) returns number of spaces at the beginning of the given
     " line number
     " using &shiftwidth allows us to use x-space indentation (if someone
