@@ -28,6 +28,7 @@ function! PotionShowBytecode()
     if match(bytecode, "** Syntax error") >= 0
         call setqflist([{'bufnr': 0, 'text': bytecode}], 'a')
     endif
+
     call append(0, split(bytecode, '\v\n'))
 endfunction
 
