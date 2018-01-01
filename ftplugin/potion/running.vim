@@ -20,11 +20,16 @@ function! s:RunPotionCommand(command)
         call setqflist([],'r')
         "close any previouly opened quickfix window
         cclose
-        " Open a new split and set it up. 
-        " Underscores indicate this is buffer,not  normal file
-        vsplit __Potion_Bytecode__
+        " Open a new window when previously created buffer does not exist 
+        " Underscores indicate this is buffer,not a normal file
+        let potionbuf = bufwinnr('__Potion_Bytecode__')
+        if ( potionbuf == -1)
+            vsplit __Potion_Bytecode__
+        else
+            execute potionbuf . "wincmd w"  
+        endif
         " Delete everything in this buffer (for using this buffer more than once
-        normal! ggdG
+        silent normal! ggdG
         " set file type
         setlocal filetype=potionbytecode
         " buftype=nofile tells Vim that it should never write to disk
