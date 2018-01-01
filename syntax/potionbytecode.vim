@@ -6,17 +6,18 @@ if exists("b:current_syntax")
 endif
 
 " Bytecode
-syntax keyword potionByteCode call getlocal move msg proto return self 
+syntax keyword potionByteCode bind call getlocal getupval loadk loadpn move msg proto return self setlocal
 highlight link potionByteCode Special
 
 syntax keyword potionByteCodeSpecial local value upval
 highlight link potionByteCodeSpecial Debug
 
 " Keyword
-syntax keyword potionKeyword loop to times while
+syntax keyword potionKeyword loop times while
 syntax keyword potionKeyword if elsif else
 syntax keyword potionKeyword class break continue
 syntax keyword potionKeyword and or
+syntax keyword potionKeyword expr list nil block keyword
 highlight link potionKeyword Keyword
 
 " Type
