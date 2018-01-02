@@ -1,0 +1,110 @@
+*potion.txt*	For Vim version 8.0	Last change: 2018 January 2
+	      functionality for the potion programming language
+
+		       ___      _   _		~
+		       / _ \___ | |_(_) ___  _ __	~
+		       / /_)/ _ \| __| |/ _ \| '_ \	~
+		      / ___/ (_) | |_| | (_) | | | |	~
+		      \/    \___/ \__|_|\___/|_| |_|	~
+	      Functionality for the Potion programming language.
+	     Includes syntax highlighting, code folding and more!
+
+==================================================================================
+CONTENTS                                                          *PotionContents*
+
+    1. Usage ................ |PotionUsage|
+    2. Mappings ............. |PotionMappings|
+    3. License .............. |PotionLicense|
+    4. Bugs ................. |PotionBugs|
+    5. Contributing ......... |PotionContributing|
+    6. Changelog ............ |PotionChangelog|
+    7. Credits .............. |PotionCredits|
+
+==================================================================================
+Section 1: Usage                                                     *PotionUsage*
+
+This plugin with automatically provide syntax highlighting for
+Potion files (files ending in .pn).
+
+It provides customized folding based on potion indentation.
+
+It also provides running 1) potion on its interpreter in a terminal,
+ or output on Vim and 2) outputting intermediate bytecode on Vim.
+
+1. Running on a potion interpreter
+
+	a) on Terminal
+	`:call potion#running#PotionCompileAndRunFileTerminal()`
+	b) on Vim
+        `:call potion#running#PotionCompileAndRunFileOnVim()`
+
+2. Ouputting intermediate bytecode
+	`:call potion#running#PotionShowBytecode()`
+
+Note: When compilation fails due to syntax error, the quickfix window will
+open with the error message. Pressing Enter will move to the error line in the
+potion code window. (this feature is beyond the original code provided by
+Steve Losh)
+
+The plugin provides additional provides section traversals to the following section 
+types in Potion code:
+
+	Type 1:	Chunks of code that has a blank line before it, and
+	 the head of file
+	Type 2:	Chunks of code that represents Potion functions.
+
+
+==================================================================================
+Section 2: Mappings                                               *PotionMappings*
+
+Following are mappings by default
+	<leader>rt	`:call potion#running#PotionCompileAndRunFileTerminal()`
+	<leader>r	`:call potion#running#PotionCompileAndRunFileOnVim()`
+	<leader>b	`:call potion#running#PotionShowBytecode()`
+	]]	Move cursor to Next Section Type 1 
+	[[	Previous Section Type 1
+	[]	Next Section Type 2 
+	][	Previous Section Type 2
+
+Note: if potion is not specified in $PATH, the potion compile/run commands will not work by
+default. To set a custom path to potion, define a |global-variable| of the name {g:potion_command}. 
+
+==================================================================================
+Section 3: License                                                 *PotionLicense*
+
+Distributed under MIT
+
+
+==================================================================================
+Section 4: Bugs                                                       *PotionBugs*
+
+If you find a bug, please post it to: https://github.com/chimney37/potion/issues
+
+
+==================================================================================
+Section 5: Contributing                                       *PotionContributing*
+
+If you can find further improvement points, fork it on github and send a pull
+request.
+
+	*Todo	focus on the code window after a Potion run in Vim.
+	*Todo	see if there are errors other than Syntax error in Potion.
+
+
+==================================================================================
+Section 6: Changelog                                             *PotionChangelog*
+
+v1.0.0
+	*Initial stable release
+
+
+==================================================================================
+Section 7: Credits                                                 *PotionCredits*
+
+Special Thanks to Steve Losh for his wonderful book "Learn Vimscript the Hard
+Way". Most of the code is pulled right off the book.
+
+
+
+
+ vim:tw=100:ts=8:ft=help:norl:
