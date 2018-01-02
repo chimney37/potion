@@ -53,6 +53,8 @@ types in Potion code:
 	 the head of file
 	Type 2:	Chunks of code that represents Potion functions.
 
+For Potion language itself and specifications, refer to:
+	http://perl11.org/potion/
 
 ==================================================================================
 Section 2: Mappings                                               *PotionMappings*
