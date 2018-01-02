@@ -9,8 +9,7 @@
 * http://learnvimscriptthehardway.stevelosh.com/
 
 # Requirements
-* Requires install [potion](http://perl11.org/potion/)
-
+* Requires installation of [potion](http://perl11.org/potion/)
 
 # Installation Instructions
 1. Get potion
@@ -31,6 +30,21 @@ bin/potion example/prime.pn
 4. Add the path to 'bin/potion' to $PATH
  
 Note: adding the path is recommended for potion interpreter and bytecode compiler to work by defualt. Otherwise use the global\_variable g:potion\_command="<path-to-potion>"
+
+# Usage
+
+1. Run potion using the interpreter
+```
+<leader>rt
+```
+2. Get potion bytecode using the interpreter executable
+```
+<leader>b
+```
+For more information, use:
+```
+:help potion
+```
 
 # LICENSE
 * MIT
