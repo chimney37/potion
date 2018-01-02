@@ -44,17 +44,12 @@ Note: adding the path is recommended for potion interpreter and bytecode compile
 # Usage
 
 1. Run potion using the interpreter
-```
-<leader>rt
-```
+```:PotionR``` or ```<leader>rt```
 2. Get potion bytecode using the interpreter executable
-```
-<leader>b
-```
+```:PotionBC``` or ```<leader>b```
+
 For more information, use:
-```
-:help potion
-```
+```:help potion```
 
 # LICENSE
 * MIT
