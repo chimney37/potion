@@ -12,7 +12,7 @@
 * probably not, and there's already one available [here](http://www.vim.org/scripts/script.php?script\_id=4821)
 
 # Illustration
-[![asciicast](https://asciinema.org/a/k4YN8zuCeTosdzUb57Pa3lP7M.png)](https://asciinema.org/a/k4YN8zuCeTosdzUb57Pa3lP7M)
+[![asciicast](https://asciinema.org/a/BsGakXMeGLaU5eWXFumCG5NbD.png)](https://asciinema.org/a/BsGakXMeGLaU5eWXFumCG5NbD)
  
 # Reference 
 * http://learnvimscriptthehardway.stevelosh.com/
