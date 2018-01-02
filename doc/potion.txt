@@ -31,15 +31,19 @@ It provides customized folding based on potion indentation.
 It also provides running 1) potion on its interpreter in a terminal,
  or output on Vim and 2) outputting intermediate bytecode on Vim.
 
-1. Running on a potion interpreter
+Below are |user-commands|, followed by the actual functions called.
 
+1. Running on a potion interpreter 
 	a) on Terminal
-	`:call potion#running#PotionCompileAndRunFileTerminal()`
+	`	:PotionRTerm`
+		`:call potion#running#PotionCompileAndRunFileTerminal()`
 	b) on Vim
-        `:call potion#running#PotionCompileAndRunFileOnVim()`
+		`:PotionR`
+        	`:call potion#running#PotionCompileAndRunFileOnVim()`
 
 2. Ouputting intermediate bytecode
-	`:call potion#running#PotionShowBytecode()`
+		`:PotionBC`
+	`	:call potion#running#PotionShowBytecode()`
 
 Note: When compilation fails due to syntax error, the quickfix window will
 open with the error message. Pressing Enter will move to the error line in the
