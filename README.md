@@ -29,7 +29,7 @@ bin/potion example/prime.pn
 ```
 4. Add the path to 'bin/potion' to $PATH
  
-Note: adding the path is recommended for potion interpreter and bytecode compiler to work by defualt. Otherwise use the global\_variable g:potion\_command="<path-to-potion>"
+Note: adding the path is recommended for potion interpreter and bytecode compiler to work by defualt. Otherwise use the global\_variable g:potion\_command="\<path-to-potion\>"
 
 # Usage
 
