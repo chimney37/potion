@@ -1,18 +1,18 @@
 # Title: potion
-# Description:
+# Description
 * a test plugin for a programming language called potion, based on Steve Losh's "Learning Vimscript the Hard Way" and a couple of own additions.
 
-# Motivation:
+# Motivation
 * Learning how to create a vim plugin
 
 # Reference 
 * http://learnvimscriptthehardway.stevelosh.com/
 
-## Requirements
+# Requirements
 * Requires install [potion](http://perl11.org/potion/)
 
 
-## Installation Instructions
+# Installation Instructions
 1. Get potion
 ```
 git clone https://github.com/perl11/potion.git
