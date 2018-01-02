@@ -5,8 +5,18 @@
 # Motivation
 * Learning how to create a vim plugin
 
+# Why would you use this plugin
+* probably not, unless you are interested in developing in potion, or have an interest in learning how to create Vim plugins.
+
+# Is is better than other plugins?
+* probably not, and there's already one available [here](http://www.vim.org/scripts/script.php?script\_id=4821)
+
+# Illustration
+[![asciicast](https://asciinema.org/a/k4YN8zuCeTosdzUb57Pa3lP7M.png)](https://asciinema.org/a/k4YN8zuCeTosdzUb57Pa3lP7M)
+ 
 # Reference 
 * http://learnvimscriptthehardway.stevelosh.com/
+* http://www.vim.org/scripts/script.php?script\_id=4821
 
 # Requirements
 * Requires installation of [potion](http://perl11.org/potion/)
