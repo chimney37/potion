@@ -5,6 +5,6 @@ nnoremap <silent> <buffer> <leader>rt :call potion#running#PotionCompileAndRunFi
 nnoremap <silent> <buffer> <leader>b :call potion#running#PotionShowBytecode()<cr>
 
 " User-Commands
-:command Potion :call potion#running#PotionCompileAndRunFileOnVim()
-:command PotionTerm :call potion#running#PotionCompileAndRunFileTerminal()
+:command PotionR :call potion#running#PotionCompileAndRunFileOnVim()
+:command PotionRTerm :call potion#running#PotionCompileAndRunFileTerminal()
 :command PotionBC :call potion#running#PotionShowBytecode()
